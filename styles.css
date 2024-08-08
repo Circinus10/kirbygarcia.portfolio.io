@@ -1,0 +1,172 @@
+/* Import fonts */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+
+/* Reset some default styles */
+body, ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* Basic styling for the body */
+body {
+    font-family: 'DM Sans', sans-serif;
+}
+
+/* Basic styling for the header */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    color: #76786C;
+    font-family: 'Baskerville', serif;
+}
+
+nav {
+    margin-right: 15%;
+}
+
+/* Logo styling */
+
+.logo{
+    margin-left: 15%;
+}
+.logo img {
+    height: 276px;
+    transition: transform 0.2s; /* Smooth transition */
+}
+
+.logo img:hover {
+    transform: scale(1.1); /* Slightly scale up on hover */
+}
+
+/* main styling */
+
+main {
+    padding-bottom: 100px; /* Adjust the value based on the footer's height */
+    margin-bottom: 100px;
+    background-color: #000;
+    width: 100%;
+}
+
+main p{
+    color: white;
+    font-size: 20px;
+}
+
+main section h2 h3 h4 h5 h6{
+    color: white;
+    font-family: "Baskerville", "script";
+}
+
+/* Navigation styling */
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-right: 10%;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #76786C;
+    font-family: 'Baskerville','cursive';
+    font-size: 36px;
+}
+
+nav ul li a:hover {
+    color: #000;
+}
+
+/* Footer styling */
+footer {
+    background-color: #000000;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    /* Remove these lines */
+    /* bottom: 0; */
+    /* position: fixed; */
+    box-sizing: border-box;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px; /* Adjust as needed */
+    margin: 0 auto;
+    height: auto;
+    align-items: center; /* Center align items vertically */
+    padding-bottom: 10px; /* Add padding to give space for the footer-bottom */
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Aligns the links to the right */
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links ul li {
+    margin-bottom: 10px;
+}
+
+.footer-links ul li a {
+    text-decoration-line: underline;
+    color: #D7DACB;
+    font-weight: 600;
+}
+
+.footer-icons {
+    display: flex;
+    align-items: center;
+    order: -1; /* Moves the icons to the left */
+}
+
+.footer-icons a {
+    margin: 0 10px;
+}
+
+.footer-icons img {
+    height: 24px;
+    width: 24px;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+}
+
+.footer-logo img {
+    height: 150px; /* Adjusted height */
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-left: 3rem; /* Adds 3rem margin to the left */
+    margin-right: auto;
+    padding: 10px 0; /* Add padding to give space above and below the copyright text */
+    box-sizing: border-box; /* Ensures padding is included in the element's total width and height */
+}
+
+.footer-copyright {
+    margin: 0; /* Remove additional margin */
+}
+
+.footer-copyright p{
+    color: #D7DACB;
+}
+
