@@ -3,11 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kirby Garcia | Contact</title> <link rel="icon" href="images/favicon.png" type="image/png">
+    <title>Kirby Garcia | Contact</title> 
+    <link rel="icon" href="images/favicon.png" type="image/png">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        main{
+            padding-top: 5%;
+            padding-bottom: 5%;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        form label {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            width: 100%;
+        }
+
+        form input, form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+
+        form button {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.2em;
+            width: 100%;
+        }
+
+        form button:hover {
+            background-color: #555;
+        }
+
+        .social-media-section {
+            text-align: center;
+            padding-bottom: 4%;
+        }
+
+        .social-media-section h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #D7DACB;
+        }
+
+        .social-media-list {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .social-media-list li {
+            margin: 10px 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .social-media-list li a {
+            text-decoration: none;
+            color: #333;
+            font-size: 1.2em;
+            display: flex;
+            align-items: center;
+        }
+
+        .social-media-list img {
+            height: 30px;
+            margin-right: 10px;
+        }
+
+        .social-media-list span {
+            font-weight: bold;
+            color: #D7DACB;
+        }
+
+        .social-media-list li a:hover span {
+            text-decoration: underline;
+        }
+        #message {
+            height: 200px; /* You can adjust the value as needed */
+        }
+    </style>
 </head>
 <body>
-    <div class="grid-overlay"></div>
     <header>
         <div class="logo">
             <a href="index.html">
@@ -24,39 +121,49 @@
         </nav>
     </header>
     <main>
-        <div id="mc_embed_shell" class="mailchimp-form">
-            <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
-        <style type="text/css">
-              #mc_embed_signup{background:#fff; clear:left; font:14px 'DM Sans',Arial,sans-serif; width: 600px;}
-              /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
-                 We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
-      </style>
-      <div id="mc_embed_signup">
-          <form action="https://github.us22.list-manage.com/subscribe/post?u=f6e7b92a2479f41e8a09e2f5b&amp;id=291a3abb16&amp;f_id=0033d0e1f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
-              <div id="mc_embed_signup_scroll"><h2>Subscribe</h2>
-                  <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
-                  <div class="mc-field-group"><label for="mce-EMAIL">Email Address <span class="asterisk">*</span></label><input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required="" value=""></div><div class="mc-field-group"><label for="mce-FNAME">First Name </label><input type="text" name="FNAME" class=" text" id="mce-FNAME" value=""></div>
-              <div id="mce-responses" class="clear foot">
-                  <div class="response" id="mce-error-response" style="display: none;"></div>
-                  <div class="response" id="mce-success-response" style="display: none;"></div>
-              </div>
-          <div aria-hidden="true" style="position: absolute; left: -5000px;">
-              /* real people should not fill this in and expect good things - do not remove this or risk form bot signups */
-              <input type="text" name="b_f6e7b92a2479f41e8a09e2f5b_291a3abb16" tabindex="-1" value="">
-          </div>
-              <div class="optionalParent">
-                  <div class="clear foot">
-                      <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button" value="Subscribe">
-                      <p style="margin: 0px auto;"><a href="http://eepurl.com/iWBYEc" title="Mailchimp - email marketing made easy and fun"><span style="display: inline-block; background-color: transparent; border-radius: 4px;"><img class="refferal_badge" src="https://digitalasset.intuit.com/render/content/dam/intuit/mc-fe/en_us/images/intuit-mc-rewards-text-dark.svg" alt="Intuit Mailchimp" style="width: 220px; height: 40px; display: flex; padding: 2px 0px; justify-content: center; align-items: center;"></span></a></p>
-                  </div>
-              </div>
-          </div>
-      </form>
-      </div>
-      <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script><script type="text/javascript">(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';}(jQuery));var $mcj = jQuery.noConflict(true);</script></div>
-      
-    </main>
+        <!-- Social Media Section -->
+        <section class="social-media-section">
+            <h2>Connect with Me</h2>
+            <ul class="social-media-list">
+                <li>
+                    <a href="https://www.artstation.com/circinuskg" target="_blank" rel="noopener noreferrer">
+                        <img src="images/artstation-icon.svg" alt="ArtStation">
+                        <span>@circinuskg</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/kirby-garcia-892238287/" target="_blank" rel="noopener noreferrer">
+                        <img src="images/linkedin-icon.svg" alt="LinkedIn">
+                        <span>@kirby-garcia</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/kirbyj.garcia/" target="_blank" rel="noopener noreferrer">
+                        <img src="images/instagram-icon.svg" alt="Instagram">
+                        <span>@kirbyj.garcia</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.x.com" target="_blank" rel="noopener noreferrer">
+                        <img src="images/twitter-icon.svg" alt="Twitter/X">
+                        <span>@kirbyjgarcia</span>
+                    </a>
+                </li>
+            </ul>
+        </section>
 
+        <!-- Contact Form Section -->
+        <form action="https://formspree.io/f/xrbzkqvj" method="POST">
+            <h2>Feel Free to Message me!</h2>
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Your Message:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">Send</button>
+        </form>
+    </main>
 
     <footer>
         <div class="footer-content">
@@ -78,6 +185,7 @@
                     <li><a href="projects.html">Projects</a></li>
                     <li><a href="services.html">Services</a></li>
                     <li><a href="contact.html">Contact</a></li>
+                    <li><a href="attributions.html">Attributions</a></li>
                 </ul>
             </div>
         </div>

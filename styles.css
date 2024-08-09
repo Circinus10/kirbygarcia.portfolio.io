@@ -10,6 +10,9 @@ body, ul {
 /* Basic styling for the body */
 body {
     font-family: 'DM Sans', sans-serif;
+    max-width: 100%;
+    width: 100%;
+    overflow-x: hidden;
 }
 
 /* Basic styling for the header */
@@ -23,7 +26,7 @@ header {
 }
 
 nav {
-    margin-right: 15%;
+    margin-right: 10%;
 }
 
 /* Logo styling */
@@ -156,8 +159,7 @@ footer {
     display: flex;
     justify-content: center;
     width: 100%;
-    margin-left: 3rem; /* Adds 3rem margin to the left */
-    margin-right: auto;
+    margin-left: 3%; /* Adds 3rem margin to the left */
     padding: 10px 0; /* Add padding to give space above and below the copyright text */
     box-sizing: border-box; /* Ensures padding is included in the element's total width and height */
 }
