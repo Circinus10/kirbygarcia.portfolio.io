@@ -23,7 +23,6 @@ header {
     padding: 20px;
     color: #76786C;
     font-family: 'Baskerville', serif;
-    max-width: 100%;
 }
 
 nav {
@@ -49,8 +48,9 @@ nav {
 main {
     padding-bottom: 100px; /* Adjust the value based on the footer's height */
     margin-bottom: 100px;
-    background-color: #000;
     width: 100%;
+    background-color: white;
+
 }
 
 main p{
@@ -173,3 +173,133 @@ footer {
     color: #D7DACB;
 }
 
+/* Project section styling */
+.project-section {
+    text-align: center;
+    align-items: center;
+    background-color: #000;
+    color: #fff;
+    padding: 5%
+}
+
+.project-details {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.project-images {
+    display: flex;
+    justify-content: center; /* Center the image containers horizontally */
+    margin-top: 20px;
+    gap: 3%;
+}
+
+.image-container {
+    width: 30%;
+    height: 400px;
+    background-color: #000000;
+    overflow: hidden; /* Ensures the image doesn’t overflow the container */
+}
+
+.image-container2 {
+    width: 30%;
+    height: 400px;
+    background-color: #ccc;
+    overflow: hidden; /* Ensures the image doesn’t overflow the container */
+}
+
+.image-container:hover {
+    transform: scale(0.95);
+}
+
+.image-container img {
+    width: 100%; /* Make image take up the full width of the container */
+    height: 100%; /* Make image take up the full height of the container */
+    object-fit: cover; /* Ensures the image covers the entire container without distortion */
+}
+
+.image-container2 iframe {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.see-more {
+    margin-top: 40px;
+    margin-left:5% ;
+    text-align: left;
+}
+
+
+.see-more a {
+    display: inline-block; /* Makes the <a> elements inline-block */
+    width: 30%; /* Adjust the width as needed */
+    margin-right: 2%;
+    text-decoration: none; /* Remove underline from <a> */
+    vertical-align: top; /* Aligns the elements to the top */
+}
+
+.see-more a:hover {
+    transform: scale(0.95);
+}
+
+.see-more a:last-child {
+    margin-right: 0; /* Remove the right margin for the last item */
+}
+
+.see-more .image-container {
+    width: 100%; /* Ensure the image container takes full width of the <a> */
+    height: 400px; /* Adjust the height as needed */
+    background-color: #ccc;
+    overflow: hidden; /* Ensures the image doesn’t overflow the container */
+}
+
+.see-more .image-container img {
+    width: 100%; /* Make image take up the full width of the container */
+    height: 100%; /* Make image take up the full height of the container */
+    object-fit: cover; /* Ensures the image covers the entire container without distortion */
+}
+/* Lightbox container */
+.lightbox {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    padding-top: 60px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.9); /* Black with opacity */
+}
+
+/* Lightbox content (image) */
+.lightbox-content {
+    margin: auto;
+    display: block;
+    height: auto;
+    max-height: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Close button */
+.lightbox .close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.lightbox .close:hover,
+.lightbox .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+    
