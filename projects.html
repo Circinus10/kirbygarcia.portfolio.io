@@ -5,9 +5,79 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kirby Garcia | Projects</title> <link rel="icon" href="images/favicon.png" type="image/png">
     <link rel="stylesheet" href="styles.css">
+    <style>
+    body {
+        font-family: 'DM Sans', sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)); /* Min width reduced */
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .gallery-item {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        padding-top: 100%; /* Creates a square container */
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+    }
+
+    .gallery-item img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Ensures the image covers the square */
+        transform: translate(-50%, -50%);
+    }
+
+    .gallery-item .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.7);
+        opacity: 0;
+        color: white;
+        padding: 20px;
+        text-align: center;
+        transition: opacity 0.3s ease;
+    }
+
+    .gallery-item:hover .overlay {
+        opacity: 1;
+    }
+
+    .gallery-item h1 {
+        margin: 0;
+        font-size: 24px;
+    }
+
+    .gallery-item p {
+        margin-top: 10px;
+        font-size: 16px;
+    }
+
+    .gallery-item:hover {
+        transform: scale(1.05);
+    }
+
+    </style>
 </head>
 <body>
-    <div class="grid-overlay"></div>
     <header>
         <div class="logo">
             <a href="index.html">
@@ -23,7 +93,87 @@
             </ul>
         </nav>
     </header>
-
+    <div class="gallery">
+        <a href="#" class="gallery-item">
+            <img src="images/projects/ironcore.JPG" alt="ironcore Academy Website">
+            <div class="overlay">
+                <h1>IronCore Academy Website</h1>
+                <p>A strength training e-Learning website.</p>
+            </div>
+        </a>
+        <a href="#" class="gallery-item">
+            <img src="images/projects/Creative.png" alt="Portrait Photography">
+            <div class="overlay">
+                <h1>Portrait Photography</h1>
+                <p>Portrait photography project with varied shots.</p>
+            </div>
+        </a>
+        <a href="#" class="gallery-item">
+            <img src="images/projects/strawberry-painting.jpg" alt="Portrait Painting">
+            <div class="overlay">
+                <h1>Portrait Illustration</h1>
+                <p>A digital ilustration painting focused on color and temperature.</p>
+            </div>
+        </a>
+        <a href="#" class="gallery-item">
+            <img src="images/projects/lighting-painting.jpg" alt="Portrait Painting">
+            <div class="overlay">
+                <h1>Portrait Illustration</h1>
+                <p>A digital ilustration painting focused on lighting.</p>
+            </div>
+        </a>
+        </a>
+        <a href="#" class="gallery-item">
+            <img src="images/projects/goldentiger-painting.jpg" alt="Tiger Painting">
+            <div class="overlay">
+                <h1>Digital Illustration</h1>
+                <p>A digital ilustration painting of a golden tiger.</p>
+            </div>
+        </a>
+        <a href="#" class="gallery-item">
+            <img src="images/projects/scrubby-tn.png" alt="Commercial Thumbnail">
+            <div class="overlay">
+                <h1>Product Commercial</h1>
+                <p>Scrubbybaby video commercial.</p>
+            </div>
+        </a>
+        <a href="#" class="gallery-item">
+            <img src="images/projects/kensington.JPG" alt="Kensington Tour website">
+            <div class="overlay">
+                <h1>Kensington Tour Website</h1>
+                <p>A project made for people looking to tour Kensington, Calgary.</p>
+            </div>
+        </a>
+        <a href="#" class="gallery-item">
+            <img src="images/projects/n2xk2-tn.png" alt="ShortMovie Thumbnail">
+            <div class="overlay">
+                <h1>N2xK2 Movie Short</h1>
+                <p>A cinematic short with a focus on lighting.</p>
+            </div>
+        </a>
+        <a href="#" class="gallery-item">
+            <img src="images/projects/sbv-3d.png" alt="3D Render of a Sunny Beach">
+            <div class="overlay">
+                <h1>3D Render</h1>
+                <p>A sunny beach vacation, made in Maxon3D.</p>
+            </div>
+        </a>
+        <a href="#" class="gallery-item">
+            <img src="images/projects/water-ps.jpg" alt="Underwater Photoshop">
+            <div class="overlay">
+                <h1>Unbelievable Photoshop</h1>
+                <p>A photoshop project made with three separate photos.</p>
+            </div>
+        </a>
+        <a href="#" class="gallery-item">
+            <img src="images/projects/order66-ti-cover.png" alt="Podcast Coverart">
+            <div class="overlay">
+                <h1>Podcast Coverart</h1>
+                <p>Album cover art made for podcasts.</p>
+            </div>
+        </a>
+        
+        </div>
     <footer>
         <div class="footer-content">
             <div class="footer-icons">
