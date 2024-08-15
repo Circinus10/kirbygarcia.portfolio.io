@@ -172,6 +172,83 @@
             transform: scale(0.95);
         }
 
+            @media (max-width: 1200px) {
+        .hero h1 {
+            font-size: 40px;
+        }
+
+        .hero p {
+            font-size: 20px;
+        }
+
+        .hero-grid {
+            grid-template-columns: 1fr; /* Stack items vertically */
+            grid-template-rows: auto; /* Adjust the height based on content */
+        }
+
+        .box1, .box2, .box3 {
+            width: 100%; /* Full-width boxes for smaller screens */
+            max-height: unset;
+        }
+
+        .image-container {
+            width: 100%; /* Make the image container full width */
+        }
+
+        .intro-container {
+            flex-direction: column;
+            width: 90%; /* Reduced width for mobile */
+        }
+
+        .intro-text {
+            margin-bottom: 20px; /* Add margin below the text */
+            font-size: 24px; /* Adjust the font size */
+        }
+
+        .tall-container {
+            width: 80%; /* Increase width of tall containers */
+            height: 50%; /* Adjust the height */
+        }
+        }
+
+        /* Further adjustments for very small screens */
+        @media (max-width: 768px) { 
+        .hero h1 {
+            font-size: 32px;
+        }
+
+        .hero p {
+            font-size: 18px;
+        }
+
+        .tall-container {
+            width: 90%; /* Full width for smaller screens */
+            height: auto; /* Allow flexible height */
+        }
+
+        .footer-icons img {
+            width: 30px; /* Make the icons smaller */
+        }
+
+        .footer-logo img {
+            width: 60px; /* Adjust the footer logo size */
+        }
+
+        .footer-links ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center; /* Center the links */
+        }
+
+        .footer-links li {
+            margin: 10px; /* Add space around the links */
+        }
+
+        .intro-text {
+            font-size: 20px; /* Smaller text for smaller screens */
+        }
+        }
+
     </style>
 </head>
 <body>
