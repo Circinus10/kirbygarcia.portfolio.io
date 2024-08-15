@@ -302,4 +302,9 @@ footer {
     text-decoration: none;
     cursor: pointer;
 }
+
+.project-details li a{
+    text-decoration-line: underline;
+    color: #D7DACB;
+}
     
