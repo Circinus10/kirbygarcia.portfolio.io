@@ -8,117 +8,191 @@
     <link rel="stylesheet" href="styles.css">
     <style>
         /* Main content styling */
-main {
-    background-color: #000; 
-}
+    main {
+        background-color: #000; 
+    }
 
-.about-section {
-    padding: 5% 10%; 
-    margin: 0 auto; 
-    text-align: left;
-}
+    .about-section {
+        padding: 5% 10%; 
+        margin: 0 auto; 
+        text-align: left;
+    }
 
-.about-content {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.about-text {
-    max-width: 40%;
-    color: #D7DACB; /* Ensure text contrast */
-    font-size: 1.2rem; /* Adjust text size for readability */
-    line-height: 1.6;
-}
-
-.about-images {
-    margin-left: auto; /* Aligns images to the right */
-    display: flex;
-    flex-direction: row;
-    gap: 15px; /* Slightly increase gap between images */
-    flex-wrap: wrap;
-}
-
-.image-container {
-    width: 100px; /* Base size */
-    height: 250px; /* Fixed height for consistent look */
-    overflow: hidden;
-    position: relative;
-    clip-path: polygon(39% 0, 100% 0, 61% 100%, 0% 100%);
-    transition: width 0.5s ease-in-out; /* Smooth expansion */
-    background: #333; /* Placeholder color while images load */
-}
-
-.image-container img {
-    object-fit: cover;
-    transition: transform 0.5s ease-in-out, right 0.5s ease-in-out;
-    position: absolute;
-    right: -100%; /* Initial position */
-    width: auto;
-    height: 100%;
-}
-
-.image-container:hover {
-    width: 300px; /* Expands container on hover */
-}
-
-.image-container:hover img {
-    transform: scale(1.1); /* Zoom in slightly on hover */
-    right: -70%; /* Adjust image position */
-}
-
-#selfportrait2 {
-    right: -40%; /* Custom starting position */
-}
-
-#selfportrait2:hover {
-    right: -10%; /* Adjust hover behavior for specific image */
-}
-
-/* Responsive styles */
-@media (max-width: 1200px) {
     .about-content {
-        flex-direction: column; /* Stack content vertically */
-        align-items: center;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 20px;
+        flex-wrap: wrap;
     }
 
     .about-text {
-        max-width: 100%; /* Full width for smaller screens */
-        text-align: center; /* Center-align text */
+        max-width: 40%;
+        color: #D7DACB; /* Ensure text contrast */
+        font-size: 1.2rem; /* Adjust text size for readability */
+        line-height: 1.6;
     }
 
     .about-images {
-        flex-direction: column; /* Stack images vertically */
-        align-items: center;
+        margin-left: auto; /* Aligns images to the right */
+        display: flex;
+        flex-direction: row;
+        gap: 15px; /* Slightly increase gap between images */
+        flex-wrap: wrap;
     }
 
     .image-container {
-        width: 100%; /* Full width on smaller screens */
-        height: auto; /* Adjust height dynamically */
+        width: 100px; /* Base size */
+        height: 250px; /* Fixed height for consistent look */
+        overflow: hidden;
+        position: relative;
+        clip-path: polygon(39% 0, 100% 0, 61% 100%, 0% 100%);
+        transition: width 0.5s ease-in-out; /* Smooth expansion */
+        background: #333; /* Placeholder color while images load */
+        max-width:50%;
     }
 
     .image-container img {
-        width: 100%; /* Ensure image fills container */
-        height: auto;
-    }
-}
-
-@media (max-width: 768px) {
-    .about-section {
-        padding: 5%;
+        object-fit: cover;
+        transition: transform 0.5s ease-in-out, right 0.5s ease-in-out;
+        position: absolute;
+        right: -100%; /* Initial position */
+        width: auto;
+        height: 100%;
     }
 
-    .about-text {
-        font-size: 1rem; /* Slightly smaller font size */
-        line-height: 1.4;
+    .image-container:hover {
+        width: 300px; /* Expands container on hover */
     }
 
-    .image-container {
-        height: 200px; /* Reduce height for smaller screens */
+    .image-container:hover img {
+        transform: scale(1.1); /* Zoom in slightly on hover */
+        right: 10%; /* Adjust image position */
     }
-}
+
+    #selfportrait2 {
+        right: -120%; /* Custom starting position */
+    }
+
+    #selfportrait2:hover {
+        right: -10%; /* Adjust hover behavior for specific image */
+    }
+
+
+    #selfportrait3:hover {
+        right: -10%; /* Adjust hover behavior for specific image */
+    }
+
+    .skills-section {
+        padding: 5% 10%; 
+        margin: 0 auto; 
+        text-align: left;
+    }
+
+    .contact-me-button {
+                background-color: #76786C;
+                border-radius: 50px;
+                height: 69px;
+                width: 181px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                margin-top: 0;
+                text-decoration: none; /* Ensure the text has no underline */
+                transition: background-color 0.3s ease; /* Smooth background color transition */
+            }
+
+            .contact-me-button:hover {
+                background-color: #5c5d52; /* Change background color on hover */
+            }
+
+            .contact-me-button span {
+                color: #D7DACB;
+                font-family: 'Baskerville';
+                font-size: 19px;
+            }
+    .collapsible-content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out;
+    }
+
+    .collapsible-header {
+        cursor: pointer;
+        background-color: #76786C;
+        color: #D7DACB;
+        padding: 10px;
+        border-radius: 5px;
+        margin: 5px 0;
+        font-size: 1.2rem;
+    }
+
+    .collapsible-header:hover {
+        background-color: #5c5d52;
+    }
+
+    .collapsible-container.open .collapsible-content {
+        max-height: 500px; /* Adjust this based on content length */
+        overflow: auto; /* Add scrolling if needed */
+    }    
+
+    /* Responsive styles */
+    @media (max-width: 1200px) {
+        .about-content {
+            flex-direction: column; /* Stack content vertically */
+            align-items: center;
+        }
+
+        .about-text {
+            max-width: 100%; /* Full width for smaller screens */
+            text-align: center; /* Center-align text */
+        }
+
+        .skills-text {
+            max-width: 100%; /* Full width for smaller screens */
+            text-align: center; /* Center-align text */
+        }
+
+        .about-images {
+            flex-direction: column; /* Stack images vertically */
+            align-items: center;
+        }
+
+        .image-container {
+            width: 100%; /* Full width on smaller screens */
+            height: auto; /* Adjust height dynamically */
+        }
+
+        .image-container img {
+            width: 100%; /* Ensure image fills container */
+            height: auto;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .about-section {
+            padding: 5%;
+        }
+
+        .about-text {
+            font-size: 1rem; /* Slightly smaller font size */
+            line-height: 1.4;
+        }
+
+        .skills-section {
+            padding: 5%;
+        }
+
+        .skills-text {
+            font-size: 1rem; /* Slightly smaller font size */
+            line-height: 1.4;
+        }
+
+        .image-container {
+            height: 200px; /* Reduce height for smaller screens */
+        }
+    }
 
     </style>
 </head>
@@ -127,14 +201,13 @@ main {
     <header>
         <div class="logo">
             <a href="./">
-                <img id="logo" src="images/logo2-noloop.gif" alt="Logo">
+                <img id="logo" src="images/logo-static.png" alt="Logo">
             </a>
         </div>
         <nav>
             <ul>
                 <li><a href="./about">About</a></li>
                 <li><a href="./projects">Projects</a></li>
-                <li><a href="./skills">Skills</a></li>
                 <li><a href="./contact">Contact</a></li>
             </ul>
         </nav>
@@ -150,10 +223,54 @@ main {
                         <img src="images/selfportait1.png" alt="Self Portrait 1">
                     </div>
                     <div class="image-container">
-                        <img src="images/selfportait3.png" alt="Self Portrait 2">
+                        <img id="selfportrait3" src="images/selfportait3.png" alt="Self Portrait 2">
                     </div>
                     <div class="image-container">
-                        <img id="selfportrait2" src="images/selfportrait2.jpg" alt="Self Portrait 3">
+                        <img id="selfportrait2" src="images/selfportrait2.png" alt="Self Portrait 3">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="skills-section">
+            <div class="skills-text">
+                <p>Here is my skills section! I specialize in visual design and media production.</p>
+        
+                <div class="collapsible-section">
+                    <h3 class="collapsible-header">Illustration ></h3>
+                    <div class="collapsible-content">
+                        <p>I've been digitally painting and drawing/sketching traditionally since 2019.<br>
+                        I'm most skilled in portraiture and realism.</p>
+                    </div>
+                </div>
+        
+                <div class="collapsible-section">
+                    <h3 class="collapsible-header">Animation ></h3>
+                    <div class="collapsible-content">
+                        <p>I animate 2D, 3D, and Motion Graphics.<br>
+                        I am proficient with the Adobe Creative suite, including Illustrator, After Effects, and Animate programs. I am also familiar with 3D programs like Maxon Cinema4D and Blender.</p>
+                    </div>
+                </div>
+        
+                <div class="collapsible-section">
+                    <h3 class="collapsible-header">Visual/Web Design ></h3>
+                    <div class="collapsible-content">
+                        <p>I am proficient in HTML, CSS, PHP, Figma, MySQL, and JavaScript. I am adept with web services like Wix and WordPress. I can also work with some mobile design applications like Expo. <br>
+                        I also plan to learn new languages in the near future, such as React or C#.</p>
+                    </div>
+                </div>
+        
+                <div class="collapsible-section">
+                    <h3 class="collapsible-header">Photography/Videography/Audio ></h3>
+                    <div class="collapsible-content">
+                        <p>I am proficient with producing photography and videos.<br>
+                        I have expertise in planning, filming/shooting, and editing in commercial and artistic media production.</p>
+                    </div>
+                </div>
+        
+                <div class="collapsible-section">
+                    <h3 class="collapsible-header">Brand Consulting ></h3>
+                    <div class="collapsible-content">
+                        <p>In SAIT's NMPD program, I learned how to approach things like logo design, brand and marketing strategy, target audience analysis, and project management.</p>
                     </div>
                 </div>
             </div>
@@ -177,7 +294,6 @@ main {
                     <li><a href="./">Home</a></li>
                     <li><a href="./about">About</a></li>
                     <li><a href="./projects">Projects</a></li>
-                    <li><a href="./skills">Skills</a></li>
                     <li><a href="./contact">Contact</a></li>
                     <li><a href="./attributions">Attributions</a></li>
                 </ul>
@@ -191,4 +307,19 @@ main {
     </footer>
     <script src="scripts.js"></script>
 </body>
+<script>
+document.querySelectorAll('.collapsible-header').forEach(header => {
+    header.addEventListener('click', () => {
+        const container = header.parentElement;
+        const content = container.querySelector('.collapsible-content');
+
+        container.classList.toggle('open');
+
+        if (container.classList.contains('open')) {
+            content.style.maxHeight = content.scrollHeight + "px";
+        } else {
+            content.style.maxHeight = null;
+        }
+    });
+});</script>
 </html>

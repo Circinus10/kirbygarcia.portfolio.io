@@ -4,6 +4,7 @@ document.getElementById('logo').addEventListener('mouseover', function () {
     img.src = img.src; // Reset the src to restart the GIF
 });
 
+// Update the current year in the footer or wherever necessary
 document.addEventListener("DOMContentLoaded", function() {
     const currentYear = new Date().getFullYear();
     document.getElementById("currentYear").textContent = currentYear;
@@ -14,8 +15,8 @@ const lightbox = document.getElementById('lightbox');
 const lightboxImg = document.getElementById('lightbox-img');
 const close = document.querySelector('.lightbox .close');
 
-// Get all images in the project section
-const images = document.querySelectorAll('.project-images .image-container img');
+// Get all images in the project section (from both containers)
+const images = document.querySelectorAll('.project-images .image-container img, .project-images .image-container3 img');
 
 // Loop through all images to add the click event
 images.forEach(image => {

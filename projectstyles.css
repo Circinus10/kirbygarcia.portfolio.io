@@ -64,7 +64,6 @@ main section h2, main section h3, main section h4, main section h5, main section
 nav ul {
     display: flex;
     list-style: none;
-    padding: 0;
 }
 
 nav ul li {
@@ -74,13 +73,14 @@ nav ul li {
 nav ul li a {
     text-decoration: none;
     color: #76786C;
-    font-family: 'Libre Baskerville', serif;
+    font-family: 'Baskerville', 'cursive';
     font-size: 36px;
 }
 
 nav ul li a:hover {
     color: #000;
 }
+
 
 /* Footer styling */
 footer {
@@ -189,6 +189,29 @@ footer {
     margin-top: 20px;
     gap: 3%;
     flex-wrap: wrap; /* Wrap images on smaller screens */
+}
+
+.image-container3
+{
+    width: 20%;
+    height: 200px;
+    background-color: #000000;
+    overflow: hidden; /* Ensures the image doesn’t overflow the container */
+}
+
+ .image-container3{
+    background-color: #000;
+}
+
+.image-container3:hover {
+    transform: scale(0.95);
+}
+
+.image-container3 img,
+.image-container3 iframe {
+    width: auto; /* Make image take up the full width of the container */
+    height: 100%; /* Make image take up the full height of the container */
+    object-fit: cover; /* Ensures the image covers the entire container without distortion */
 }
 
 .image-container,
@@ -317,7 +340,7 @@ footer {
         flex-direction: column; /* Stack images vertically on small screens */
     }
 
-    .image-container, .image-container2 {
+    .image-container, .image-container2, .image-container3 {
         width: 100%; /* Full width for small screens */
         height: auto; /* Adjust height based on content */
     }
