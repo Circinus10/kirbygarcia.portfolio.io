@@ -6,7 +6,7 @@
     <title>Kirby Garcia</title> <link rel="icon" href="images/favicon.png" type="image/png">
     <link rel="stylesheet" href="styles.css">
     <style>
-        main{
+        main {
             margin-bottom: 3%;
             padding: 0;
         }   
@@ -17,44 +17,48 @@
             padding: 50px 0;
             text-align: center;
         }
-
+    
         .hero-content {
             max-width: 800px;
             margin-bottom: 30px;
         }
-
+    
         .hero h1 {
             font-family: 'Baskerville';
             color: #D7DACB;
             font-size: 48px;
             margin: 0;
         }
-
+    
         .hero p {
             font-size: 24px;
             color: #D7DACB;
         }
-
+    
         .hero-grid {
             display: grid;
-            grid-template-columns: 2fr 1fr;
-            grid-template-rows: 1fr 1fr;
-            gap: 20px;
-            width: 100%;
-            max-width: 1500px;
+            grid-template-columns: repeat(2, 1fr); /* Two equal columns */
+            grid-template-rows: repeat(2, auto); /* Two rows with automatic height */
+            gap: 20px; /* Space between the grid items */
+            width: 80%; /* Adjusts grid width */
+            max-width: 80%; /* Restricts the grid's maximum width */
+            margin: 0 auto; /* Centers the grid */
         }
+
 
         .hero-box {
             position: relative;
-            overflow: hidden;
+            width: 100%; /* Box spans the grid column */
+            aspect-ratio: 16 / 9; /* Keeps a consistent 16:9 aspect ratio */
+            overflow: hidden; /* Ensures any content outside is hidden */
         }
 
         .hero-box img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+            width: 100%; /* Fills the width of the box */
+            height: 100%; /* Fills the height of the box */
+            object-fit: cover; /* Ensures the image covers the entire box */
         }
-
+    
         .text-box {
             position: absolute;
             top: 50%; /* Initially position the box in the center vertically */
@@ -64,42 +68,41 @@
             color: #fff;
             padding: 10px;
             text-align: center;
-            height: 30%; /* Add height as desired */
+            min-height: 35%;
             width: 100%;
             display: flex; /* Enable flexbox */
             flex-direction: column; /* Arrange the content vertically */
             justify-content: center; /* Vertically center the content */
             transition: transform 0.3s ease; /* Smooth transition */
         }
-
+    
         .hero-box:hover .text-box {
             top: auto; /* Remove top positioning */
             bottom: 0; /* Position the box at the bottom */
             transform: translateX(-50%); /* Keep the horizontal centering */
             height: 20%; /* Reduce height on hover */
         }
-
+    
         .hero-box h1 {
             font-size: 36px;
             margin: 0;
         }
-
+    
         .hero-box p {
             margin: 0;
             margin-top: 1%;
-            font-size: 24px;
+            font-size: 16px;
         }
-
+    
+        .box1, .box2, .box3 {
+            width: 100%; /* Ensure consistent sizing across all boxes */
+            max-width: 100%;
+        }
+    
         .box1 {
-            grid-column: 1 / 2;
-            grid-row: 1 / 3;
-            max-height: 820px;
-            width: 1000px;
-        }
-
-        .box2, .box3 {
-            max-height: 400px;
-            width: 500px;
+            grid-column: 1 / 2; /* Spans the first column */
+            grid-row: 1 / 3; /* Spans both rows */
+            height: 100%; /* Ensures full height of the spanned rows */
         }
 
         .box2 {
@@ -111,7 +114,7 @@
             grid-column: 2 / 3;
             grid-row: 2 / 3;
         }
-
+    
         .intro-container {
             display: flex;
             align-items: center;
@@ -120,36 +123,33 @@
             margin: 40px auto;
             /* Center the container horizontally and add margin for spacing */
         }
-
+    
         .intro-text {
-            margin-right: 20px; /* Adjust spacing between text and image */
             flex: 1;
             font-size: 28px;
         }
-
+    
         .image-container {
-            width: 400px; /* Increased width */
+            width: 400px; /* Adjust width */
             height: 300px;
             overflow: hidden;
             position: relative;
             clip-path: polygon(40% 0%, 100% 0, 100% 100%, 0% 100%);
         }
-
-
-
+    
         .intro-image {
             object-fit: cover;
             width: 100%;
             height: 100%;
         }
-
+    
         .tall-containers {
             display: flex;
             gap: 20px; /* Space between containers */
             flex-wrap: wrap; /* Allow wrapping on smaller screens */
             justify-content: center; /* Center containers horizontally */
         }
-
+    
         .tall-container {
             width: 20%; /* Adjust width as needed */
             height: 60%; /* Adjust height as needed */
@@ -157,100 +157,100 @@
             justify-content: center;
             align-items: center;
             overflow: hidden;
-            
             margin-top: 5%;
             margin-bottom: 5%;
         }
-
+    
         .tall-container img {
             width: auto;
             height: 100%;
             object-fit: cover; /* Ensure the GIF covers the container */
             border: 2px solid #ddd; /* Border for better separation */
         }
-
-        .tall-container img:hover{
+    
+        .tall-container img:hover {
             transform: scale(0.95);
         }
-
-            @media (max-width: 1200px) {
-        .hero h1 {
-            font-size: 40px;
+    
+        @media (max-width: 1100px) {
+            .hero h1 {
+                font-size: 40px;
+            }
+    
+            .hero p {
+                font-size: 20px;
+            }
+    
+            .hero-grid {
+                grid-template-columns: 1fr; /* Stack items vertically */
+                grid-template-rows: auto; /* Adjust the height based on content */
+                max-width: 80%;
+            }
+    
+            .box1, .box2, .box3 {
+                width: 100%; /* Full-width boxes for smaller screens */
+                max-height: unset;
+            }
+    
+            .image-container {
+                width: 100%; /* Make the image container full width */
+            }
+    
+            .intro-container {
+                flex-direction: column;
+                width: 90%; /* Reduced width for mobile */
+            }
+    
+            .intro-text {
+                margin-bottom: 20px; /* Add margin below the text */
+                font-size: 24px; /* Adjust the font size */
+            }
+    
+            .tall-container {
+                width: 80%; /* Increase width of tall containers */
+                height: 50%; /* Adjust the height */
+            }
         }
-
-        .hero p {
-            font-size: 20px;
-        }
-
-        .hero-grid {
-            grid-template-columns: 1fr; /* Stack items vertically */
-            grid-template-rows: auto; /* Adjust the height based on content */
-        }
-
-        .box1, .box2, .box3 {
-            width: 100%; /* Full-width boxes for smaller screens */
-            max-height: unset;
-        }
-
-        .image-container {
-            width: 100%; /* Make the image container full width */
-        }
-
-        .intro-container {
-            flex-direction: column;
-            width: 90%; /* Reduced width for mobile */
-        }
-
-        .intro-text {
-            margin-bottom: 20px; /* Add margin below the text */
-            font-size: 24px; /* Adjust the font size */
-        }
-
-        .tall-container {
-            width: 80%; /* Increase width of tall containers */
-            height: 50%; /* Adjust the height */
-        }
-        }
-
+    
         /* Further adjustments for very small screens */
         @media (max-width: 768px) { 
-        .hero h1 {
-            font-size: 32px;
+            .hero h1 {
+                font-size: 32px;
+            }
+    
+            .hero p {
+                font-size: 18px;
+            }
+    
+            .tall-container {
+                width: 90%; /* Full width for smaller screens */
+                height: auto; /* Allow flexible height */
+            }
+    
+            .footer-icons img {
+                width: 30px; /* Make the icons smaller */
+            }
+    
+            .footer-logo img {
+                width: 60px; /* Adjust the footer logo size */
+            }
+    
+            .footer-links ul {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center; /* Center the links */
+            }
+    
+            .footer-links li {
+                margin: 10px; /* Add space around the links */
+            }
+    
+            .intro-text {
+                font-size: 20px; /* Smaller text for smaller screens */
+            }
         }
-
-        .hero p {
-            font-size: 18px;
-        }
-
-        .tall-container {
-            width: 90%; /* Full width for smaller screens */
-            height: auto; /* Allow flexible height */
-        }
-
-        .footer-icons img {
-            width: 30px; /* Make the icons smaller */
-        }
-
-        .footer-logo img {
-            width: 60px; /* Adjust the footer logo size */
-        }
-
-        .footer-links ul {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center; /* Center the links */
-        }
-
-        .footer-links li {
-            margin: 10px; /* Add space around the links */
-        }
-
-        .intro-text {
-            font-size: 20px; /* Smaller text for smaller screens */
-        }
-        }
-
     </style>
+    
 </head>
 <body>
     <div class="grid-overlay"></div>
