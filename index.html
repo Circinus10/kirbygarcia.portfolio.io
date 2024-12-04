@@ -55,38 +55,39 @@
             object-fit: cover;
         }
 
-        .hero-box img:hover {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transform: scale(0.95);
-        }
-
         .text-box {
             position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
+            top: 50%; /* Initially position the box in the center vertically */
+            left: 50%; /* Position the box in the center horizontally */
+            transform: translate(-50%, -50%); /* Adjust the box to exactly center it */
             background-color: rgba(0, 0, 0, 0.7);
             color: #fff;
             padding: 10px;
-            transform: translateY(100%);
-            transition: transform 0.3s ease;
             text-align: center;
+            height: 30%; /* Add height as desired */
+            width: 100%;
+            display: flex; /* Enable flexbox */
+            flex-direction: column; /* Arrange the content vertically */
+            justify-content: center; /* Vertically center the content */
+            transition: transform 0.3s ease; /* Smooth transition */
         }
 
         .hero-box:hover .text-box {
-            transform: translateY(0);
+            top: auto; /* Remove top positioning */
+            bottom: 0; /* Position the box at the bottom */
+            transform: translateX(-50%); /* Keep the horizontal centering */
+            height: 20%; /* Reduce height on hover */
         }
 
-        .text-box h1 {
+        .hero-box h1 {
+            font-size: 36px;
             margin: 0;
+        }
+
+        .hero-box p {
+            margin: 0;
+            margin-top: 1%;
             font-size: 24px;
-        }
-
-        .text-box p {
-            margin: 0;
-            font-size: 16px;
         }
 
         .box1 {
@@ -279,21 +280,21 @@
                     <img src="images/projects/ironcore.JPG" alt="Ironcore Academy Website">
                     <div class="text-box">
                         <h1>Web Design</h1>
-                        <p>IronCore Academy, a strength training e-Learning website project </p>
+                        <p>Responsive, functional, and user-centered.</p>
                     </div>
                 </a>
                 <a class="hero-box box2" href="./2">
                     <img src="images/projects/Creative.png" alt="Creative Photo Portrait Edit">
                     <div class="text-box">
                         <h1>Visual Design</h1>
-                        <p>Creative Portrait Photography Project</p>
+                        <p>Creative, Aesthetic and Impactful Design Solutions</p>
                     </div>
                 </a>
                 <a class="hero-box box3" href="./4">
                     <img src="images/projects/lighting-painting.jpg" alt="Digital Portrait Painting">
                     <div class="text-box">
-                        <h1>Digital Portrait Painting</h1>
-                        <p>A painting I did while learning lighting for portraits</p>
+                        <h1>Illustration</h1>
+                        <p>Bringing Concepts to Life through Detailed Art</p>
                     </div>
                 </a>
             </div>
